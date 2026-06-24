@@ -1,0 +1,169 @@
+[
+    {
+        "nombre": "Goku",
+        "raza": "Saiyajin",
+        "nivel_poder": 9500,
+        "planeta": "Tierra",
+        "edad": 47,
+        "alineacion": "Heroe",
+        "transformaciones": [
+            "Super Saiyajin",
+            "Super Saiyajin 2",
+            "Super Saiyajin 3",
+            "Super Saiyajin Dios",
+            "Ultra Instinto"
+        ],
+        "tecnicas": [
+            "Kamehameha",
+            "Genkidama",
+            "Kaioken"
+        ]
+    },
+    {
+        "nombre": "Vegeta",
+        "raza": "Saiyajin",
+        "nivel_poder": 9300,
+        "planeta": "Vegeta",
+        "edad": 52,
+        "alineacion": "Heroe",
+        "transformaciones": [
+            "Super Saiyajin",
+            "Super Saiyajin 2",
+            "Super Saiyajin Blue"
+        ],
+        "tecnicas": [
+            "Final Flash",
+            "Big Bang Attack",
+            "Galick Gun"
+        ]
+    },
+    {
+        "nombre": "Gohan",
+        "raza": "Hibrido",
+        "nivel_poder": 8900,
+        "planeta": "Tierra",
+        "edad": 27,
+        "alineacion": "Heroe",
+        "transformaciones": [
+            "Super Saiyajin",
+            "Super Saiyajin 2",
+            "Beast"
+        ],
+        "tecnicas": [
+            "Masenko",
+            "Kamehameha"
+        ]
+    },
+    {
+        "nombre": "Piccolo",
+        "raza": "Namekiano",
+        "nivel_poder": 8500,
+        "planeta": "Namek",
+        "edad": 32,
+        "alineacion": "Heroe",
+        "transformaciones": [
+            "Orange Piccolo",
+            "Poder Despertado"
+        ],
+        "tecnicas": [
+            "Makankosappo",
+            "Masenko"
+        ]
+    },
+    {
+        "nombre": "Freezer",
+        "raza": "Mutante",
+        "nivel_poder": 9100,
+        "planeta": "Freezer 79",
+        "edad": 70,
+        "alineacion": "Villano",
+        "transformaciones": [
+            "Primera Forma",
+            "Segunda Forma",
+            "Forma Final",
+            "Golden Freezer",
+            "Black Freezer"
+        ],
+        "tecnicas": [
+            "Death Beam",
+            "Death Ball"
+        ]
+    },
+    {
+        "nombre": "Cell",
+        "raza": "Bioandroide",
+        "nivel_poder": 8800,
+        "planeta": "Otro",
+        "edad": 8,
+        "alineacion": "Villano",
+        "transformaciones": [
+            "Imperfecto",
+            "Semi Perfecto",
+            "Perfecto"
+        ],
+        "tecnicas": [
+            "Kamehameha",
+            "Solar Flare"
+        ]
+    },
+    {
+        "nombre": "Majin Buu",
+        "raza": "Majin",
+        "nivel_poder": 8700,
+        "planeta": "Otro",
+        "edad": 5000000,
+        "alineacion": "Villano",
+        "transformaciones": [
+            "Buu Gordo",
+            "Buu Malo",
+            "Super Buu",
+            "Kid Buu"
+        ],
+        "tecnicas": [
+            "Chocolate Beam",
+            "Regeneracion"
+        ]
+    },
+    {
+        "nombre": "Trunks",
+        "raza": "Hibrido",
+        "nivel_poder": 7600,
+        "planeta": "Tierra",
+        "edad": 28,
+        "alineacion": "Heroe",
+        "transformaciones": [
+            "Super Saiyajin",
+            "Super Saiyajin Rage"
+        ],
+        "tecnicas": [
+            "Burning Attack",
+            "Heat Dome Attack"
+        ]
+    },
+    {
+        "nombre": "Krilin",
+        "raza": "Humano",
+        "nivel_poder": 4200,
+        "planeta": "Tierra",
+        "edad": 48,
+        "alineacion": "Heroe",
+        "transformaciones": [],
+        "tecnicas": [
+            "Kienzan",
+            "Taiyoken"
+        ]
+    },
+    {
+        "nombre": "Bills",
+        "raza": "Dios de la Destruccion",
+        "nivel_poder": 9900,
+        "planeta": "Otro",
+        "edad": 100000000,
+        "alineacion": "Neutral",
+        "transformaciones": [],
+        "tecnicas": [
+            "Hakai",
+            "Esfera de Destruccion"
+        ]
+    }
+]
