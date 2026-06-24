@@ -7,19 +7,19 @@ def menu ():
     menu = True
     while menu == True:
         print("""
-    --------------- MENU ---------------
-        
-    1) Importar la lista de personajes
-    2) Listar los personajes de alguna raza
-    3) Modificar un personaje
-    4) Eliminar un personaje
-    5) Ordenar la lista
-    6) Ver el personaje con mas tecnicas
-    7) Ver el heroe con menor cantidad de transformaciones
-    8) Guardar y salir
-        
-    ------------------------------------
-    """)
+        --------------- MENU ---------------
+            
+        1) Importar la lista de personajes
+        2) Listar los personajes de alguna raza
+        3) Modificar un personaje
+        4) Eliminar un personaje
+        5) Ordenar la lista
+        6) Ver el personaje con mas tecnicas
+        7) Ver el heroe con menor cantidad de transformaciones
+        8) Guardar y salir
+            
+        ------------------------------------
+        """)
         
         eleccion = pedir_int("Elija la opcion deseada: ")
 
@@ -39,14 +39,17 @@ def menu ():
                     personaje = validar_dato_json(datos, nombre)
                     caracteristica = input("Ingrese la caracteristica a modificar: ").lower()
                     if type(validar_key_json(datos, caracteristica)) == dict:
-                        nuevo_valor = input("Ingrese el nuevo valor: ")
+                        nuevo_valor = validar_str_exacto(
+                            input("Ingrese el nuevo valor: "),
+                              "",
+                                "ERROR, el valor no puede estar vacio: ")
                         if detectar_casteable(nuevo_valor) == True:
                             personaje[caracteristica] = int(nuevo_valor)
                         else:
                             personaje[caracteristica] = nuevo_valor
                     else:
                         print(f'la caracteristica "{caracteristica}" '
-                              'no se encontró en el personaje "{nombre}"')
+                              f'no se encontró en el personaje "{nombre}"')
                 else:
                     print(f'el personaje "{nombre}" no se encontró en la lista')
 
@@ -69,5 +72,3 @@ def menu ():
                     json.dump(datos, archivo, indent=4)
                 print("Sesion finalizada")
                 menu = False
-
-menu()
