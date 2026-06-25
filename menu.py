@@ -27,12 +27,17 @@ def menu ():
             case 1:
                 with open('dragon_ball.json', 'r', ) as archivo:
                     datos = json.load(archivo)
+                print("Lista importada correctamente")
             case 2:
                 if datos == []:
                     print("Ninguna lista de personajes fue cargada")
                 else:
-                    raza = input("Ingrese la raza por la que desea filtrar: ").capitalize()
-                    mostrar_json(filtrar_json(datos, "raza", raza))
+                    raza = validar_str_exacto(
+                        input(
+                        "Ingrese la raza por la que desea filtrar: ").capitalize(),
+                        "",
+                        "La raza no puede estar vacia: ")
+                    mostrar_lista_dict(filtrar_lista(datos, "raza", raza))
             case 3:
                 if datos == []:
                     print("Ninguna lista de personajes fue cargada")
@@ -66,28 +71,29 @@ def menu ():
                 if datos == []:
                     print("Ninguna lista de personajes fue cargada")
                 else:
-                    nombre = input("Ingrese el nombre del personaje a eliminar: ").capitalize()
-                    eliminar_json(datos, "nombre", nombre)
+                    nombre = input(
+                    "Ingrese el nombre del personaje a eliminar: ").capitalize()
+                    eliminar_item(datos, "nombre", nombre)
             case 5:
                 if datos == []:
                     print("Ninguna lista de personajes fue cargada")
                 else:
-                    copia_lista = copiar_json(datos)
+                    copia_lista = copiar_lista(datos)
                     key = validar_str_lista(
                         input("Ingrese el dato por el que desea filtrar:"
                         " (nombre, raza o edad): "),
                         ["nombre", "edad", "raza"])
-                    mostrar_json(ordenar_json(copia_lista, key))
+                    mostrar_lista_dict(ordenar_lista(copia_lista, key))
             case 6:
                 if datos == []:
                     print("Ninguna lista de personajes fue cargada")
                 else:
-                    ver_maximo_json(datos, "tecnicas")
+                    ver_maximo_lista(datos, "tecnicas")
             case 7:
                 if datos == []:
                     print("Ninguna lista de personajes fue cargada")
                 else:
-                    ver_minimo_json(datos, "transformaciones")
+                    ver_minimo_lista(datos, "transformaciones")
             case 8:
                 if datos != []:
                     with open("dragon_ball.json", "w") as archivo:

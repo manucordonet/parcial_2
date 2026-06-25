@@ -29,7 +29,7 @@ def mostrar_lista(lista: list) -> str:
     return mensaje
 
 
-def mostrar_json(lista: list):
+def mostrar_lista_dict(lista: list):
     mensaje = ""
     
     for i in range(0, len(lista), 1):
@@ -38,7 +38,7 @@ def mostrar_json(lista: list):
         
     print(mensaje)
 
-def filtrar_json(lista:dict, key:str, valor:int|str):
+def filtrar_lista(lista:dict, key:str, valor:int|str):
     lista_nueva = []
     encontrado = False
     for item in lista:
@@ -50,7 +50,7 @@ def filtrar_json(lista:dict, key:str, valor:int|str):
 
     return lista_nueva
 
-def eliminar_json(lista:list, key:str, valor:str):
+def eliminar_item(lista:list, key:str, valor:str):
     encontrado = False
     for item in lista:
         if item[key] == valor:
@@ -64,7 +64,7 @@ def eliminar_json(lista:list, key:str, valor:str):
 
 
 
-def ver_maximo_json(lista:list, key:str):
+def ver_maximo_lista(lista:list, key:str):
     valor_max = 0
     lista_maximos = []
     for item in lista:
@@ -77,9 +77,9 @@ def ver_maximo_json(lista:list, key:str):
             lista_maximos.append(item)
         elif contador == valor_max:
             lista_maximos.append(item)
-    mostrar_json(lista_maximos)
+    mostrar_lista_dict(lista_maximos)
     
-def ver_minimo_json(lista:list, key:str):
+def ver_minimo_lista(lista:list, key:str):
     valor_min = 0
     lista_minimos = []
     flag = True
@@ -97,15 +97,15 @@ def ver_minimo_json(lista:list, key:str):
             lista_minimos.append(item)
         elif contador == valor_min:
             lista_minimos.append(item)
-    mostrar_json(lista_minimos)
+    mostrar_lista_dict(lista_minimos)
 
-def copiar_json(lista):
+def copiar_lista(lista):
     lista_nueva = []
     for item in lista:
         lista_nueva.append(item)
     return lista_nueva
 
-def ordenar_json(lista, key):
+def ordenar_lista(lista, key):
     for i in range (len(lista)):
         for j in range (len(lista)-1):
             if lista[j][key] > lista[j+1][key]:
