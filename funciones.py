@@ -59,7 +59,7 @@ def eliminar_item(lista:list, key:str, valor:str):
             lista.remove(item)
             break
     if encontrado == False:
-        print("No se encontró el dato especificado")
+        print(f'No se encontró el dato "{valor}" en la lista')
 
 
 
