@@ -48,6 +48,7 @@ def menu ():
                        "El nombre no puede estar vacio: ")                    
                     personaje = validar_dato_json(datos, nombre)
                     if type(personaje) == dict:
+                        print(mostrar_diccionario(personaje))
                         caracteristica = validar_str_exacto(input(
                             "Ingrese la caracteristica a modificar: ").lower(),
                      "",
