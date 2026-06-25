@@ -16,7 +16,7 @@ def pedir_int(mensaje:str)->int:
         ingreso = input("ERROR, ingrese una opcion valida: ")
     return int(ingreso)
 
-def validar_str_lista(string:str, opciones_validas:list):
+def validar_str_lista(string:str, opciones_validas:list)->str:
     valido = False
     valor = string
     while valido == False:

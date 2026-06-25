@@ -29,7 +29,7 @@ def mostrar_lista(lista: list) -> str:
     return mensaje
 
 
-def mostrar_lista_dict(lista: list):
+def mostrar_lista_dict(lista: list)->None:
     mensaje = ""
     
     for i in range(0, len(lista), 1):
@@ -38,7 +38,7 @@ def mostrar_lista_dict(lista: list):
         
     print(mensaje)
 
-def filtrar_lista(lista:dict, key:str, valor:int|str):
+def filtrar_lista(lista:dict, key:str, valor:int|str)->list:
     lista_nueva = []
     encontrado = False
     for item in lista:
@@ -50,7 +50,7 @@ def filtrar_lista(lista:dict, key:str, valor:int|str):
 
     return lista_nueva
 
-def eliminar_item(lista:list, key:str, valor:str):
+def eliminar_item(lista:list, key:str, valor:str)->None:
     encontrado = False
     for item in lista:
         if item[key] == valor:
@@ -64,7 +64,7 @@ def eliminar_item(lista:list, key:str, valor:str):
 
 
 
-def ver_maximo_lista(lista:list, key:str):
+def ver_maximo_lista(lista:list, key:str)->None:
     valor_max = 0
     lista_maximos = []
     for item in lista:
@@ -79,7 +79,7 @@ def ver_maximo_lista(lista:list, key:str):
             lista_maximos.append(item)
     mostrar_lista_dict(lista_maximos)
     
-def ver_minimo_lista(lista:list, key:str):
+def ver_minimo_lista(lista:list, key:str)->None:
     valor_min = 0
     lista_minimos = []
     flag = True
@@ -99,7 +99,7 @@ def ver_minimo_lista(lista:list, key:str):
             lista_minimos.append(item)
     mostrar_lista_dict(lista_minimos)
 
-def ordenar_lista(lista, key):
+def ordenar_lista(lista, key)->list:
     for i in range (len(lista)):
         for j in range (len(lista)-1):
             if lista[j][key] > lista[j+1][key]:

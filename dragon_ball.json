@@ -1,30 +1,10 @@
 [
     {
-        "nombre": "Goku",
-        "raza": "Saiyajin",
-        "nivel_poder": 9500,
-        "planeta": "Tierra",
-        "edad": 47,
-        "alineacion": "Heroe",
-        "transformaciones": [
-            "Super Saiyajin",
-            "Super Saiyajin 2",
-            "Super Saiyajin 3",
-            "Super Saiyajin Dios",
-            "Ultra Instinto"
-        ],
-        "tecnicas": [
-            "Kamehameha",
-            "Genkidama",
-            "Kaioken"
-        ]
-    },
-    {
         "nombre": "Vegeta",
         "raza": "Saiyajin",
         "nivel_poder": 9300,
         "planeta": "Vegeta",
-        "edad": 52,
+        "edad": 30,
         "alineacion": "Heroe",
         "transformaciones": [
             "Super Saiyajin",
