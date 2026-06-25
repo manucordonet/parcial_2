@@ -34,41 +34,63 @@ def menu ():
                     raza = input("Ingrese la raza por la que desea filtrar: ")
                     mostrar_json(filtrar_json(datos, "raza", raza))
             case 3:
-                nombre = input("Ingrese el nombre del personaje a modificar: ")
-                if type(validar_dato_json(datos, nombre)) == dict:
-                    personaje = validar_dato_json(datos, nombre)
-                    caracteristica = input("Ingrese la caracteristica a modificar: ").lower()
-                    if type(validar_key_json(datos, caracteristica)) == dict:
-                        nuevo_valor = validar_str_exacto(
-                            input("Ingrese el nuevo valor: "),
-                              "",
-                                "ERROR, el valor no puede estar vacio: ")
-                        if detectar_casteable(nuevo_valor) == True:
-                            personaje[caracteristica] = int(nuevo_valor)
-                        else:
-                            personaje[caracteristica] = nuevo_valor
-                    else:
-                        print(f'la caracteristica "{caracteristica}" '
-                              f'no se encontró en el personaje "{nombre}"')
+                if datos == []:
+                    print("Ninguna lista de personajes fue cargada")
                 else:
-                    print(f'el personaje "{nombre}" no se encontró en la lista')
+                    nombre = validar_str_exacto(input(
+                        "Ingrese el nombre del personaje a modificar: ").capitalize(),
+                     "",
+                       "El nombre no puede estar vacio: ")
+                    if type(validar_dato_json(datos, nombre)) == dict:
+                        personaje = validar_dato_json(datos, nombre)
+                        caracteristica = validar_str_exacto(input(
+                            "Ingrese la caracteristica a modificar: ").lower(),
+                     "",
+                       "La caracteristica no puede estar vacia: ")
+                        if type(validar_key_json(datos, caracteristica)) == dict:
+                            nuevo_valor = validar_str_exacto(
+                                input("Ingrese el nuevo valor: "),
+                                "",
+                                    "ERROR, el valor no puede estar vacio: ")
+                            if detectar_casteable(nuevo_valor) == True:
+                                personaje[caracteristica] = int(nuevo_valor)
+                            else:
+                                personaje[caracteristica] = nuevo_valor
+                        else:
+                            print(f'la caracteristica "{caracteristica}" '
+                                f'no se encontró en el personaje "{nombre}"')
+                    else:
+                        print(f'el personaje "{nombre}" no se encontró en la lista')
 
             case 4:
-                nombre = input("Ingrese el nombre del personaje a eliminar: ")
-                eliminar_json(datos, "nombre", nombre)
+                if datos == []:
+                    print("Ninguna lista de personajes fue cargada")
+                else:
+                    nombre = input("Ingrese el nombre del personaje a eliminar: ").capitalize()
+                    eliminar_json(datos, "nombre", nombre)
             case 5:
-                copia_lista = copiar_json(datos)
-                key = validar_str_lista(
-                    input("Ingrese el dato por el que desea filtrar:"
-                    " (nombre, raza o edad): "),
-                    ["nombre", "edad", "raza"])
-                mostrar_json(ordenar_json(copia_lista, key))
+                if datos == []:
+                    print("Ninguna lista de personajes fue cargada")
+                else:
+                    copia_lista = copiar_json(datos)
+                    key = validar_str_lista(
+                        input("Ingrese el dato por el que desea filtrar:"
+                        " (nombre, raza o edad): "),
+                        ["nombre", "edad", "raza"])
+                    mostrar_json(ordenar_json(copia_lista, key))
             case 6:
-                ver_maximo(datos, "tecnicas")
+                if datos == []:
+                    print("Ninguna lista de personajes fue cargada")
+                else:
+                    ver_maximo(datos, "tecnicas")
             case 7:
-                ver_minimo(datos, "transformaciones")
+                if datos == []:
+                    print("Ninguna lista de personajes fue cargada")
+                else:
+                    ver_minimo(datos, "transformaciones")
             case 8:
-                with open("dragon_ball.json", "w") as archivo:
-                    json.dump(datos, archivo, indent=4)
+                if datos != []:
+                    with open("dragon_ball.json", "w") as archivo:
+                        json.dump(datos, archivo, indent=4)
                 print("Sesion finalizada")
                 menu = False
