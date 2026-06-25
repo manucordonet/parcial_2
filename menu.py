@@ -31,7 +31,7 @@ def menu ():
                 if datos == []:
                     print("Ninguna lista de personajes fue cargada")
                 else:
-                    raza = input("Ingrese la raza por la que desea filtrar: ")
+                    raza = input("Ingrese la raza por la que desea filtrar: ").capitalize()
                     mostrar_json(filtrar_json(datos, "raza", raza))
             case 3:
                 if datos == []:
@@ -40,9 +40,9 @@ def menu ():
                     nombre = validar_str_exacto(input(
                         "Ingrese el nombre del personaje a modificar: ").capitalize(),
                      "",
-                       "El nombre no puede estar vacio: ")
-                    if type(validar_dato_json(datos, nombre)) == dict:
-                        personaje = validar_dato_json(datos, nombre)
+                       "El nombre no puede estar vacio: ")                    
+                    personaje = validar_dato_json(datos, nombre)
+                    if type(personaje) == dict:
                         caracteristica = validar_str_exacto(input(
                             "Ingrese la caracteristica a modificar: ").lower(),
                      "",
@@ -82,12 +82,12 @@ def menu ():
                 if datos == []:
                     print("Ninguna lista de personajes fue cargada")
                 else:
-                    ver_maximo(datos, "tecnicas")
+                    ver_maximo_json(datos, "tecnicas")
             case 7:
                 if datos == []:
                     print("Ninguna lista de personajes fue cargada")
                 else:
-                    ver_minimo(datos, "transformaciones")
+                    ver_minimo_json(datos, "transformaciones")
             case 8:
                 if datos != []:
                     with open("dragon_ball.json", "w") as archivo:

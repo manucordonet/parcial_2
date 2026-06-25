@@ -64,7 +64,7 @@ def eliminar_json(lista:list, key:str, valor:str):
 
 
 
-def ver_maximo(lista:list, key:str):
+def ver_maximo_json(lista:list, key:str):
     valor_max = 0
     lista_maximos = []
     for item in lista:
@@ -79,7 +79,7 @@ def ver_maximo(lista:list, key:str):
             lista_maximos.append(item)
     mostrar_json(lista_maximos)
     
-def ver_minimo(lista:list, key:str):
+def ver_minimo_json(lista:list, key:str):
     valor_min = 0
     lista_minimos = []
     flag = True

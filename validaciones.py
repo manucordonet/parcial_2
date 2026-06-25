@@ -62,3 +62,8 @@ def validar_key_json(lista, dato):
         for subitem in item:
             if subitem == dato:
                 return item
+            
+def validar_key_dict(diccionario, dato):
+    for item in diccionario:
+        if item == dato:
+            return diccionario
