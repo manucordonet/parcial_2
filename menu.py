@@ -1,6 +1,7 @@
 from validaciones import *
 from funciones import *
 import json
+import copy
 
 def menu ():
     datos = []
@@ -79,7 +80,7 @@ def menu ():
                 if datos == []:
                     print("Ninguna lista de personajes fue cargada")
                 else:
-                    copia_lista = copiar_lista(datos)
+                    copia_lista = copy.deepcopy(datos)
                     key = validar_str_lista(
                         input("Ingrese el dato por el que desea filtrar:"
                         " (nombre, raza o edad): "),

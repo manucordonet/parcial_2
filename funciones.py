@@ -99,12 +99,6 @@ def ver_minimo_lista(lista:list, key:str):
             lista_minimos.append(item)
     mostrar_lista_dict(lista_minimos)
 
-def copiar_lista(lista):
-    lista_nueva = []
-    for item in lista:
-        lista_nueva.append(item)
-    return lista_nueva
-
 def ordenar_lista(lista, key):
     for i in range (len(lista)):
         for j in range (len(lista)-1):
